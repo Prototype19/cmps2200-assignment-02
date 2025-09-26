@@ -39,34 +39,16 @@ $$ W(n)=O(n^3log_{2}(n)) $$
 $$ W(n)=O(n^{3/2}log(n)) $$
 
 * $W(n)=W(n-1)+2$
-.  
-.  
-. 
-.  
-. 
-.  
-.  
-.  
+
+$$ W(n)=O(2n) $$
 
 * $W(n)= W(n-1)+n^c$, with $c\geq 1$
-.  
-.  
-.  
-.  
-.  
-. 
-.  
-. 
+
+$$ W(n)=O(n^c) $$
 
 * $W(n)=W(\sqrt{n})+1$
-.  
-.  
-.  
-.  
-.  
-. 
-. 
 
+$$ W(n)=O(n\sqrt{n}) $$
 
 ## Part 2. Algorithm Comparison
 
@@ -88,13 +70,19 @@ Suppose that for a given task you are choosing between the following three algor
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
 
+Algorithm $\mathcal{A}$ running time: 
 
-.  
-.  
-.  
-.  
-. 
-. 
+$$ W(n)=O(n^{log_{2}(5)}) $$
+
+Algorithm $\mathcal{B}$ running time: 
+
+$$ W(n)=O(2^{n-1}) $$
+
+Algorithm $\mathcal{C}$ running time: 
+
+$$ W(n)=O(n^{2}log_{3}(n)) $$
+
+I would pick Algorithm $\mathcal{A}$ as it's work is tight bounded to O(n^2) while Algorithm $\mathcal{B}$ is tight bounded to O(2^n) and $\mathcal{C}$ is tight bounded to O(n^2log(n)), which are both worse than $\mathcal{A}$.
 
 
 
