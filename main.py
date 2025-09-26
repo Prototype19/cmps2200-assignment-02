@@ -4,6 +4,7 @@ See assignment-02.md for details.
 """
 from collections import defaultdict
 import math
+from helper_functions import *
 
 #### Iterative solution
 def parens_match_iterative(mylist):
@@ -22,9 +23,9 @@ def parens_match_iterative(mylist):
     >>>parens_match_iterative(['('])
     False
     """
-    ### TODO
+
     return iterate(parens_update, 0, mylist) == 0
-    ###
+
 
 
 def parens_update(current_output, next_input):
@@ -39,19 +40,19 @@ def parens_update(current_output, next_input):
     Returns:
       the updated value of `current_output`
     """
-    ###TODO
-    if current_output == -math.inf:  # in an invalid state; carry it forward
+
+    if current_output == -math.inf:
         return current_output
-    if next_input == '(':            # new open parens 
+    if next_input == '(':
         return current_output + 1
-    elif next_input == ')':          # new close parens
-        if current_output <= 0:      # close before an open -> invalid
+    elif next_input == ')':
+        if current_output <= 0:
             return -math.inf
-        else:                        # valid
+        else:
             return current_output - 1
-    else:                            # ignore non-parens input
+    else:
         return current_output
-    ###
+
 
 
 
@@ -76,10 +77,10 @@ def parens_match_scan(mylist):
     False
     
     """
-    ###TODO
+
     history, last = scan(plus, 0, list(map(paren_map, mylist)))
     return last == 0 and reduce(min_f, 0, history) >= 0
-    ###
+
 
 def scan(f, id_, a):
     """
@@ -148,7 +149,7 @@ def parens_match_dc_helper(mylist):
       L is the number of unmatched left parentheses. This output is used by 
       parens_match_dc to return the final True or False value
     """
-    ###TODO
+
     # Base cases
     if len(mylist) == 0:
         return [0,0]
@@ -161,13 +162,11 @@ def parens_match_dc_helper(mylist):
             return (0, 0)
     i,j = parens_match_dc_helper(mylist[:len(mylist)//2])
     k,l = parens_match_dc_helper(mylist[len(mylist)//2:])
-    # Combination:
-    # Return the tuple (R,L) using some combination of the values i,j,k,l defined above.
-    # This should be done in constant time.
+
     if j > k:
         return (i, l + j - k)
     else:
         return (i + k - j, l)
-    ###
+
     
 
