@@ -112,9 +112,8 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
-. 
-
+$$ W(n)=O(n) $$
+$$ S(n)=O(n) $$
 
 
 **3c. scan solution** Implement `parens_match_scan` a solution to this problem using `scan`. **Hint**: We have given you the function `paren_map` which maps `(` to `1`, `)` to `-1` and everything else to `0`. How can you pass this function to `scan` to solve the problem? You may also find the `min_f` function useful here. Implement `parens_match_scan` and test with `test_parens_match_scan`
@@ -128,9 +127,8 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
-.  
-
+$$ W(n)=O(n) $$
+$$ S(n)=O(log(n)) $$
 
 
 
@@ -149,8 +147,8 @@ Below, we'll solve this problem three different ways, using iterate, scan, and d
 
 **enter answer here**
 
-.  
-. 
+$$ W(n)=O(nlog(n)) $$
+$$ S(n)=O(log(n)) $$
 
 
  
