@@ -1,6 +1,6 @@
 # CMPS 2200 Assignment 2
 
-**Name:**_________________________
+**Name:** Daron Lebaredian
 
 In this assignment we'll work on applying the methods we've learned to analyze recurrences, and also see their behavior
 in practice. As with previous
@@ -15,66 +15,28 @@ and push to your github repository.
 Derive asymptotic upper bounds of work for each recurrence below.
 
 * $W(n)=2W(n/3)+1$
-.  
-.  
-. 
-.  
-. 
-.  
-. 
+
+$$ W(n)=O(n^{log_{3}(2)}) $$
  
 * $W(n)=5W(n/4)+n$
-.  
-.
-.  
-. 
-.  
-. 
-.  
-.  
-. 
+
+$$ W(n)=O(n^{log_{4}(5)+1}) $$
 
 * $W(n)=7W(n/7)+n$
-.  
-. 
-.  
-.  
-. 
-.  
-.
+
+$$ W(n)=O(nlog_{7}(n)) $$
 
 * $W(n)=9W(n/3)+n^2$
-.  
-.
-. 
-.  
-. 
-.  
-.  
-.  
-.
+
+$$ W(n)=O(n^2log_{3}(n)) $$
 
 * $W(n)=8W(n/2)+n^3$
-.  
-.
-.  
-.  
-.  
-.  
-. 
-.  
-. 
 
+$$ W(n)=O(n^3log_{2}(n)) $$
 
 * $W(n)=49W(n/25)+n^{3/2}\log n$
-.  
-.  
-. 
-.  
-. 
-.  
-.  
-.  
+
+$$ W(n)=O(n^{3/2}log(n)) $$
 
 * $W(n)=W(n-1)+2$
 .  
